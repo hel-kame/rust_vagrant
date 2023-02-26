@@ -1,0 +1,31 @@
+---
+- name: Configure Rust environment
+  hosts: localhost
+  become: no
+
+  tasks:
+    - name: Install development tools
+      become: true
+      apt:
+        state: present
+        name:
+          - build-essential
+          - clang
+          - nethogs
+          - sysstat
+          - vim
+          - git
+
+    - name: Download Rust Binary
+      get_url:
+        url: https://sh.rustup.rs
+        dest: /home/vagrant/sh.rustup.rs
+        mode: '0755'
+
+    - name: Install Rust
+      shell: /home/vagrant/sh.rustup.rs -y
+
+    - name: Delete Rust Binary
+      file:
+        state: absent
+        path: /home/vagrant/sh.rustup.rs
