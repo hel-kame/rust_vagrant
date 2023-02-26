@@ -1,9 +1,9 @@
  <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Vagrant.png" width=200 alt="vagrant-logo" />
- <h3 align="center">CredLancer development environment</h3>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png" width=200 alt="vagrant-logo" />
+ <h3 align="center">Rust development environment</h3>
 
   <p align="center">
-    An awesome Vagrant to jumpstart your development into CredLancer.
+    An awesome Vagrant to jumpstart your development into Rust.
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template/issues"><strong>Report Bug</strong></a>
     ·
@@ -18,7 +18,6 @@
 - [Installation](#installation)
 - [Development](#development)
   - [Vagrant Commands](#vagrant-commands)
-  - [Setting up Cairo](#setting-up-cairo-environment)
 - [More](#more)
 
 ## About <a name="about"></a>
@@ -32,17 +31,10 @@ To use the environment, you need to have [Vagrant](https://www.vagrantup.com/) a
 So if you don't, you should run:
 
 ```shell
-curl -L https://raw.githubusercontent.com/captainahab0x/CredLancer_Starknet/env/install.sh | bash
-```
-
-To install and use the environment, run:
-
-```shell
-git clone --branch env --single-branch git@github.com:captainahab0x/CredLancer_Starknet.git env && cd env/
+curl -L https://raw.githubusercontent.com/hel-kame/rust_vagrant/master/install.sh | bash
 ```
 
 ---
-
 
 ## Development <a name="development"></a>
 
@@ -57,14 +49,6 @@ To be able to control Vagrant environment, you must be at the location of the `V
 * **`vagrant status`** - See what the environment is up to.
 * **`vagrant destroy`** - Completely delete the environment and all data on it.
 * **`vagrant reload`** - Reloads the environment. Useful if you change the Vagrantfile. Essentially a **`vagrant halt`** followed by **`vagrant up`**.
-
-### Setting up Cairo environment <a name="setting-up-cairo-environment"></a>
-
-When you are in your environment, you just need to activate the python virtual environment :
-```shell
-source ~/.venvs/venv-cairo/bin/activate
-```
-In this virtual python environment, you can compile and run your [Cairo](https://www.cairo-lang.org/) programs. You can also use all the [Protostar](https://docs.swmansion.com/protostar/) tools.
 
 ## More <a name="more"></a>
 
