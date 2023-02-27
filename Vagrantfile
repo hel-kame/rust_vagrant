@@ -7,7 +7,6 @@ Vagrant.configure("2") do |config|
     v.memory = 4098
     v.cpus = 4
   end
-  config.vm.hostname = "kasarlabs"
   config.vm.provision "shell", path: "./scripts/setup.sh", privileged: true
   config.vm.provision "shell", path: "./scripts/run_ansible.sh", privileged: false
   config.ssh.forward_agent = true
